@@ -1,0 +1,369 @@
+body {
+  
+  color:rgb(0, 0, 0);  
+  font-family: "Ubuntu", sans-serif;
+    line-height: 1.25;
+  }
+.link {
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: rgb(185, 223, 223);
+  border: rgb(185, 223, 233) solid 0.5em;
+  border-radius: 1em;
+  padding-top: 0.5em;
+  text-decoration: none;
+
+} 
+
+  table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      max-width:60em;
+      margin:0 auto
+  }
+  .headmenu {
+      display:grid;
+      grid-template-columns:1fr 4fr;
+      width:60em;
+      margin:0 auto;
+      padding:0
+  }
+  .topnav {
+      display:flex;
+      flex-flow:row;
+      justify-content:flex-end
+  }
+  header h1 {
+      font-size:4em;
+      text-align:center;
+      margin:1.5em 0 .5em 0
+  }
+
+
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+  
+
+@media screen and (min-width: 60em) {
+    .wrapper {
+        max-width:60em;
+        margin:0 auto
+    }
+    .headmenu {
+        display:grid;
+        grid-template-columns:1fr 4fr;
+        width:60em;
+        margin:0 auto;
+        padding:0
+    }
+    .topnav {
+        display:flex;
+        flex-flow:row;
+        justify-content:flex-end
+    }
+    header h1 {
+        font-size:4em;
+        text-align:center;
+        margin:1.5em 0 .5em 0
+    }
+}
+img,video {
+    max-width:100%;
+    height:auto
+}
+figure {
+    margin:0
+}
+figure img {
+    display:block;
+    border:1px solid orange
+}
+.myndabox {
+    display:flex;
+    flex-flow:row wrap
+}
+.buttInput {
+    display:none
+}
+.buttLabel {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    border:1px outset #999;
+    color:#fff;
+    cursor:pointer;
+    text-align:center;
+    background-color:#000;
+    transition:all .4s ease;
+    z-index:999
+}
+.buttInput:checked+.buttLabel {
+    box-shadow:inset 0 0.2em 0.2em rgba(0,0,0,0.25);
+    border:1px inset #999;
+    color:#fff
+}
+.buttInput:checked {
+    position:fixed;
+    bottom:2.4em;
+    left:0;
+    z-index:990;
+    transition:all .5s ease
+}
+@media screen and (min-width: 48em) {
+    .buttLabel {
+        display:none
+    }
+}
+button.thoughtbot {
+    background-color:#ee432e;
+    background-image:linear-gradient (top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+    border:1px solid #951100;
+    border-radius:5px;
+    box-shadow:inset 0px 0px 0px 1px rgba(255,115,100,0.4),0 1px 3px #333;
+    color:#fff;
+    font:bold 1.4em/1 sans-serif;
+    padding:12px 0 14px 0;
+    text-align:center;
+    text-shadow:0px -1px 1px rgba(0,0,0,0.8);
+    width:150px
+}
+button.thoughtbot:hover {
+    background-color:#f37873;
+    background-image:linear-gradient(bottom, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+    cursor:pointer
+}
+.menuInput {
+    display:none
+}
+.menuLabel {
+    position:fixed;
+    top:0;
+    right:0;
+    width:2.5em;
+    height:1.6em;
+    color:#0B3E7A;
+    font-size:1.5em;
+    text-align:left;
+    padding:.5em;
+    transition:all .4s ease;
+    z-index:999
+}
+.menuInput:checked+.menuLabel {
+    transform:translate(-23px, -3px) rotate(-90deg);
+    transition:all .5s ease}.menuInput:checked ~ .topmenu {
+        position:fixed;
+        top:3em;
+        right:0;
+        z-index:980;
+        transition:all .5s ease
+    }
+    .topmenu {
+        display:block;
+        position:fixed;
+        top:3em;
+        right:-15em;
+        z-index:980;
+        padding:0;
+        margin:0;
+        list-style:none;
+        transition:all .5s ease;
+        background-color:rgba(255,255,255,0.9)
+    }
+    .topmenu a {
+        display:block;
+        color:#0B3E7A;
+        text-decoration:none;
+        text-transform:uppercase;
+        text-align:left;
+        padding:1em 2em 0 2em;
+        margin:0;
+        letter-spacing:2px
+    }
+    .topmenu a:last-child {
+        padding:1em 2em
+    }
+    .logo a {
+        display:block;
+        color:#0B3E7A;
+        text-decoration:none;
+        text-transform:uppercase;
+        text-align:center;
+        padding:1em 0;
+        margin:0;
+        letter-spacing:2.5px
+    }
+    .topmenu a:hover,.topmenu a:active,.topmenu a:focus,.logo a:hover {
+        color:orangered;
+        margin-bottom:0
+    }
+    .topmenu a.current {
+        color:orangered
+    }
+    .logo {
+        display:flex;
+        flex-flow:row;
+        align-content:center
+    }
+    .logo img {
+        width:2.5em;
+        height:3.5em
+    }
+    .logo p {
+        letter-spacing:3.5px;
+        color:#0B3E7A
+    }
+    @media screen and (min-width: 37.5em) {
+        .topmenu .verklink {
+            display:none
+        }
+    }
+    @media screen and (min-width: 60em) {
+        .topmenu {
+            display:flex;
+            flex-flow:row;
+            justify-content:flex-end;
+            position:relative;
+            top:0;
+            right:0;
+            transition:none
+        }
+        .menuLabel {
+            display:none
+        }
+    }
+.register form {
+    margin-bottom:1em
+}
+.register legend {
+    font-weight:bold
+}
+.register fieldset {
+    border:1px solid #aaa;
+    border-radius:.5em;
+    padding:1em;
+    margin:1em 0
+}
+.register label {
+    color:#688;
+    cursor:pointer;
+    font-weight:400;
+}
+.register input, .register select, .register textarea {
+    border:1px solid #c6c9cc;
+    border-radius:5px;
+    color:#444;
+    display:inline;
+    margin:5px 0 1em 0;
+    padding:5px 8px
+}
+.register select {
+    height:2em;
+    width:5em
+}
+.register input[type=text], .register input[type=tel], .register input[type=email], .register textarea {
+    width:100%
+}
+.register textarea {
+    font-family:monospace
+}
+.register input[type=submit] {
+    background-color:#700;
+    background:linear-gradient(#273827, #507150 90%, #273827);
+    border:0;
+    color:#fff;
+    cursor:pointer;
+    font-size:1.2em;
+    padding:.5em 1em;
+    margin:0 0 0 5em;
+    border-radius:.3em
+}
+.register input[type=submit]:hover, .register input[type=submit]:active {
+    background:linear-gradient(to bottom, #667, #330);
+    color:#bbb
+}
+@media screen and (min-width: 48em) {
+    .register form {
+        max-width:30em
+    }
+    .register fieldset {
+        padding:1em 2em
+    }
+}
+

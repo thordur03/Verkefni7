@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="setup.css">
+</head>
+<body>
+    
+<div class="register">
+<form action="#" method="GET">
+<fieldset>
+<legend>Upplýsingar um tölfuna þína</legend>
+<label>
+    Nafnið þitt
+    <input type="text" name="nafn" placeholder="Fullt nafn" required="" autofocus="" title="Vinsamlegast skráið nafn" > 
+</label>
+<label>
+    Notenda Nafn
+    <input type="text" name="nafn" placeholder="Notendanafn" required="" autofocus="" title="Vinsamlegast skráið notenda nafn" minlength="5" maxlength="16"> 
+</label>
+<label>
+    Símanúmer
+    <input type="text" name="sími" placeholder="sími þinn" title="skráið íslenskt Símanúmer" required="" pattern="\d{3}(?:[\-\s]?)\d{4}" >
+</label>    
+<label>
+    Tölvupóstur
+    <input type="email" name="tölvupóstur" placeholder="Tölvupóstur" required="" >
+    </label>
+<label>
+    Fæðingarár
+    <input type="date" name="fædd/ur" required="" >
+</label>
+<br />
+<label>
+    Frá 1-10 hvernig einkunn gefuru tölfunni þinni? 
+    <select name="fjöldi">
+        <option value="1" selected="">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">5</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+</label>
+<br />
+<label for="CPU">
+        CPU:
+        <input type="checkbox" name="CPU1" value="" /> Intel
+        <input type="checkbox" name="CPU2" value="" /> AMD
+</label> 
+<label for="GPU">
+    GPU:
+    <input type="checkbox" name="GPU1" value="" /> NVIDA 
+    <input type="checkbox" name="GPU2" value="" /> AMD 
+</label>
+<br />
+<label for="Ram">
+        Ram:
+        <input type="radio" name="RAM2" value="DDR2" /> DDR2  
+        <input type="radio" name="RAM3" value="DDR3" /> DDR3
+        <input type="radio" name="RAM4" value="DDR4" /> DDR4
+</label>
+<label>
+<br />
+    Athugasemdir um tölvunna þína
+    <textarea rows="4" name="Athugasemdir"></textarea>
+</label>
+    <input type="submit" name="submit" value="Skrá" />
+</fieldset>
+</form>
+</div>
+<a class="link" href="index.html">Notendur</a>
+</body>
+</html>
